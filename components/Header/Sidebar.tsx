@@ -6,6 +6,10 @@ import { useEffect, useRef } from 'react';
 import useFocusTrap from '../hooks/useFocusTrap';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import LocalSwitcher from './LocalSwitcher';
+import useTypedLocale from '@/hooks/useTypedLocale';
+import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 type NavigationItems = {
   title: string;
@@ -51,7 +55,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
-
+  // const t = useTranslations('Components.sideBar');
   const { theme } = useTheme();
 
   useEffect(() => {
