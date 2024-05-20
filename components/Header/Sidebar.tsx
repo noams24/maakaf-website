@@ -55,7 +55,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   const sidebarRef = useRef<HTMLDivElement | null>(null);
-  // const t = useTranslations('Components.sideBar');
+  //  const t = useTranslations('Components.sideBar');
   const { theme } = useTheme();
 
   useEffect(() => {
